@@ -6,10 +6,10 @@
 var navItems = document.getElementsByClassName('navi');
 
 for (var i = 0; i < navItems.length; i++) {
-    navItems[i].addEventListener('click', showMenu);
+    navItems[i].addEventListener('click', showNav);
 }
 
-function showMenu() {
+function showNav() {
     var item = this.querySelector('.inner');
     
     if (item.style.display === 'block') {
@@ -20,6 +20,22 @@ function showMenu() {
 }
 
 /*2) to each restaurant name that will show and hide (toggle) the secret menu item for that particular restaurant.*/
+
+var menuBox = document.getElementsByClassName('name');
+
+for (var i = 0; i < menuBox.length; i++) {
+    menuBox[i].addEventListener('click', showMenu);
+}
+
+function showMenu() {
+    var menuInfo = this.querySelector('.menu');
+
+    if (menuInfo.style.display === 'block') {
+        menuInfo.style.display = 'none';
+    } else {
+        menuInfo.style.display = 'block';
+    }
+}
 
 
 /*3) to the thumbs down icon that will add a count (counter) for each time the icon is clicked on.*/
